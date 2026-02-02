@@ -1,8 +1,8 @@
 {
-    "name": "MkDocs PlantUML Japanese Environment",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "name": "MkDocs Local PlantUML Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,9 +16,9 @@
     "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"
     },
-    "forwardPorts": [8000],
+    "forwardPorts": [8000, 8080],
     "postCreateCommand": "mkdocs --version",
-	"remoteUser": "root",
+    "remoteUser": "root",
 	"shutdownAction": "stopContainer",
 	"runArgs": ["--rm"]
 }
