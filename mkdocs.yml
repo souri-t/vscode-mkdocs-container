@@ -1,0 +1,32 @@
+site_name: システム仕様書
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: ja
+          name: 日本語
+          default: true
+          build: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
+  - pymdownx.superfences:
+      custom_fences:
+        - name: plantuml
+          class: plantuml
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - ホーム: index.md
+  - 仕様詳細: details.md
