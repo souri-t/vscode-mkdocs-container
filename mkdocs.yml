@@ -1,4 +1,5 @@
 site_name: システム仕様書
+use_directory_urls: false
 theme:
   name: material
   language: ja
@@ -6,6 +7,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - toc.integrate
+    - toc.follow
 
 plugins:
   - search
@@ -28,5 +30,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - ホーム: index.md
-  - 仕様詳細: details.md
+  - 概要: 01-overview.md
+  - システム構成: 02-system-architecture.md
+  - 機能設計: 03-features.md
+  - 画面設計: 04-screen-design.md
+  - 運用設計: 05-operations.md
+  - 付録: 06-appendix.md
