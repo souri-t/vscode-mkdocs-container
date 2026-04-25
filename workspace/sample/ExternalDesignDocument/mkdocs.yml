@@ -31,9 +31,9 @@ markdown_extensions:
 
 nav:
   - TOP: index.md
-  - 概要: 01-overview.md
-  - システム構成: 02-system-architecture.md
-  - 機能設計: 03-features.md
-  - 画面設計: 04-screen-design.md
-  - 運用設計: 05-operations.md
-  - 付録: 06-appendix.md
+  - 概要: 01-overview/index.md
+  - システム構成: 02-system-architecture/index.md
+  - 機能設計: 03-features/index.md
+  - 画面設計: 04-screen-design/index.md
+  - 運用設計: 05-operations/index.md
+  - 付録: 06-appendix/index.md

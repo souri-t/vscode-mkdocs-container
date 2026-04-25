@@ -1,0 +1,46 @@
+site_name: API仕様書
+use_directory_urls: false
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - toc.follow
+
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: ja
+          name: 日本語
+          default: true
+          build: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - plantuml_markdown:
+      server: http://plantuml:8080
+  - pymdownx.superfences:
+      custom_fences:
+        - name: plantuml
+          class: plantuml
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - TOP: index.md
+  - API概要: 01-overview/index.md
+  - 共通仕様: 02-common-specifications/index.md
+  - 認証・認可: 03-authentication/index.md
+  - エンドポイント一覧:
+      - 一覧: 04-endpoints/index.md
+      - API-001 顧客一覧取得: 04-endpoints/api-001-get-customers.md
+      - API-002 顧客詳細取得: 04-endpoints/api-002-get-customer-by-id.md
+      - API-003 顧客新規登録: 04-endpoints/api-003-create-customer.md
+      - API-004 顧客更新: 04-endpoints/api-004-update-customer.md
+      - API-005 顧客削除: 04-endpoints/api-005-delete-customer.md
+  - データモデル: 05-data-models/index.md
+  - エラー設計: 06-error-handling/index.md
+  - 付録: 07-appendix/index.md
