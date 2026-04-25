@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ..:/workspace:cached
+      - ../workspace:/workspace:cached
     command: sleep infinity
     networks:
       - mkdocs-net
