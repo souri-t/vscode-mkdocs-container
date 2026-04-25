@@ -13,6 +13,7 @@ RUN pip install --no-cache-dir \
     mkdocs \
     mkdocs-material \
     plantuml-markdown \
-    mkdocs-static-i18n
+    mkdocs-static-i18n \
+    mkdocs-drawio
 
 WORKDIR /workspace

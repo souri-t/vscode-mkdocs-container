@@ -11,6 +11,7 @@ theme:
 
 plugins:
   - search
+  - drawio
   - i18n:
       languages:
         - locale: ja
