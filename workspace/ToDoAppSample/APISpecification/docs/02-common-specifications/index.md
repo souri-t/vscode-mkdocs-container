@@ -36,15 +36,3 @@
 | `status` | No | string | `open` `completed` `archived` |
 | `labelId` | No | string | ラベル ID による絞り込み |
 | `keyword` | No | string | タイトル、説明の部分一致検索 |
-
-## 命名規則
-
-- JSON のプロパティ名は lower camel case とする
-- リソース名は複数形を使用する
-- パスは小文字の英字で定義する
-
-## レスポンス共通方針
-
-- 正常系は HTTP ステータス 2xx を返す
-- 異常系は HTTP ステータス 4xx / 5xx を返す
-- エラー時は `code` `message` `details` を含む JSON を返す

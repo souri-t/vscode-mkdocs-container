@@ -1,4 +1,4 @@
-site_name: 外部仕様書
+site_name: ToDoアプリ外部仕様書
 use_directory_urls: false
 theme:
   name: material
@@ -33,7 +33,9 @@ markdown_extensions:
 nav:
   - TOP: index.md
   - 概要: 01-overview/index.md
-  - システム構成: 02-system-architecture/index.md
+  - システム構成:
+      - 一覧: 02-system-architecture/index.md
+      - ローカルDB ER図: 02-system-architecture/local-db-er.md
   - 機能仕様: 03-features/index.md
   - 画面設計:
       - 一覧: 04-screen-design/index.md

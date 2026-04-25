@@ -1,4 +1,4 @@
-site_name: ToDo API仕様書
+site_name: ToDoアプリAPI仕様書
 use_directory_urls: false
 theme:
   name: material
