@@ -30,6 +30,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
+  - TOP: index.md
   - 概要: 01-overview.md
   - システム構成: 02-system-architecture.md
   - 機能設計: 03-features.md
