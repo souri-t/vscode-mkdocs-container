@@ -18,9 +18,14 @@ plugins:
           default: true
           build: true
 
+hooks:
+  - ../../../mkdocs-hooks/mathjax_assets.py
+
 markdown_extensions:
   - admonition
   - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
   - plantuml_markdown:
       server: http://plantuml:8080
   - pymdownx.superfences:
