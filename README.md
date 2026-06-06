@@ -22,6 +22,8 @@
 
 - **Material for MkDocs**: 美しいテーマ
 - **PlantUML Markdown**: ` ```plantuml ` ブロックで図を描画
+- **Drawio**: Draw.ioの図をMarkdown内で描画
+- **MathJax**: 数式の描画
 - **i18n**: 日本語対応設定
 
 ## 静的HTMLの出力方法（配布用）

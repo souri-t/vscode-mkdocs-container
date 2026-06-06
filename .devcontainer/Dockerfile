@@ -1,3 +1,9 @@
+FROM node:20-slim AS mathjax
+
+WORKDIR /tmp/mathjax
+RUN npm init -y \
+    && npm install mathjax@3.2.2
+
 FROM python:3.11-slim
 
 # Install Java (required for PlantUML) and Graphviz
@@ -15,5 +21,7 @@ RUN pip install --no-cache-dir \
     plantuml-markdown \
     mkdocs-static-i18n \
     mkdocs-drawio
+
+COPY --from=mathjax /tmp/mathjax/node_modules/mathjax/es5 /opt/mathjax/es5
 
 WORKDIR /workspace

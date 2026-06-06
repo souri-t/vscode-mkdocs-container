@@ -6,6 +6,7 @@ services:
     working_dir: /workspace/sample/APISpecification
     volumes:
       - ./workspace:/workspace:cached
+      - ./mkdocs-hooks:/mkdocs-hooks:ro
     command: mkdocs serve -a 0.0.0.0:8000
     ports:
       - "38000:8000"

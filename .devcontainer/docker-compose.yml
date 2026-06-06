@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ../workspace:/workspace:cached
+      - ../mkdocs-hooks:/mkdocs-hooks:ro
     command: sleep infinity
     networks:
       - mkdocs-net
