@@ -3,7 +3,7 @@ services:
     build:
       context: ./.devcontainer
       dockerfile: Dockerfile
-    working_dir: /workspace/sample/APISpecification
+    working_dir: /workspace/sample/ExternalDesignDocument
     volumes:
       - ./workspace:/workspace:cached
       - ./mkdocs-hooks:/mkdocs-hooks:ro
@@ -12,6 +12,7 @@ services:
       - "38000:8000"
     depends_on:
       - plantuml
+      - kroki
     networks:
       - mkdocs-net
 
@@ -19,8 +20,24 @@ services:
     image: plantuml/plantuml-server:jetty
     expose:
       - "8080"
-    ports:
-      - "8080:8080"
+    networks:
+      - mkdocs-net
+
+  kroki:
+    image: yuzutech/kroki
+    depends_on:
+      - mermaid
+    environment:
+      KROKI_MERMAID_HOST: mermaid
+    expose:
+      - "8000"
+    networks:
+      - mkdocs-net
+
+  mermaid:
+    image: yuzutech/kroki-mermaid
+    expose:
+      - "8002"
     networks:
       - mkdocs-net
 

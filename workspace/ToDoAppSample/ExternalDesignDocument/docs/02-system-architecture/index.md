@@ -21,6 +21,16 @@ API --> FCM : リマインド通知依頼
 @enduml
 ```
 
+## システム構成図（Mermaidサンプル）
+
+```mermaid
+flowchart LR
+    User[利用者] --> App[ToDo Androidアプリ]
+    App --> LocalDB[(ローカルDB)]
+    App --> API[ToDo API]
+    API --> MainDB[(アプリDB)]
+```
+
 ## サブシステム／モジュール構成
 
 本システムは以下のモジュールで構成される。

@@ -11,6 +11,15 @@ WebServer -- ExternalAPI : 外部連携
 @enduml
 ```
 
+## システム構成図（Mermaidサンプル）
+
+```mermaid
+flowchart LR
+    User[ユーザー] --> Web[Webサーバー]
+    Web --> DB[(データベース)]
+    Web --> API[外部API]
+```
+
 ## システム構成図（Draw.ioサンプル）
 
 以下は `.drawio` ファイルをそのまま埋め込むサンプルです。ファイル本体は同じフォルダに配置しています。

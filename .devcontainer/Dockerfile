@@ -24,4 +24,6 @@ RUN pip install --no-cache-dir \
 
 COPY --from=mathjax /tmp/mathjax/node_modules/mathjax/es5 /opt/mathjax/es5
 
+ENV PYTHONPATH=/mkdocs-hooks
+
 WORKDIR /workspace
