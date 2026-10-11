@@ -21,6 +21,7 @@ plugins:
 
 hooks:
   - ../../../mkdocs-hooks/mathjax_assets.py
+  - ../../../mkdocs-hooks/diagram_links.py
 
 markdown_extensions:
   - admonition
@@ -29,6 +30,8 @@ markdown_extensions:
       generic: true
   - plantuml_markdown:
       server: http://plantuml:8080
+      format: svg
+      classes: plantuml
   - pymdownx.superfences:
       custom_fences:
         - name: plantuml
